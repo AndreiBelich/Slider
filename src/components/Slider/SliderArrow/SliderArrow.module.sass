@@ -1,0 +1,67 @@
+$xlSize: 175px
+$xlOffset: -100px
+$lSize: 135px
+$lOffset: -80px
+$mSize: 95px
+$mOffset: -50px
+$sSize: 55px
+$sOffset: -35px
+
+.sliderArrow
+  width: $xlSize
+  height: $xlSize
+  border: 5px solid brown
+  position: absolute
+  cursor: pointer
+  opacity: 0.5
+  top: 25%
+  transform: rotate(135deg)
+  transition: opacity 1s ease-in-out
+  &:hover
+    opacity: 1
+
+
+.leftArrow
+  left: $xlOffset
+  border-top: none
+  border-left: none
+  
+
+.rightArrow
+  right: $xlOffset
+  border-right: none
+  border-bottom: none
+
+
+@media (max-width: 992px)
+  .sliderArrow
+    width: $lSize
+    height: $lSize
+
+  .leftArrow
+    left: $lOffset
+  
+  .rightArrow
+    right: $lOffset
+
+@media (max-width: 767px)
+  .sliderArrow
+    width: $mSize
+    height: $mSize
+  
+  .leftArrow
+    left: $mOffset
+  
+  .rightArrow
+    right: $mOffset
+
+@media (max-width: 567px)
+  .sliderArrow
+    width: $sSize
+    height: $sSize
+  
+  .leftArrow
+    left: $sOffset
+  
+  .rightArrow
+    right: $sOffset
